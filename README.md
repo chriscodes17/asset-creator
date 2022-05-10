@@ -3,7 +3,20 @@ Demo Link: https://chrisdev-asset.freedomains.dev/api
 
 **About**
 
-This project was built to demonstrate the ability to create an API to power an online text editor that creates files and deletes each file if older than 5 minutes. The data is stored one a fileData.db file, and files are stored in a file_storage folder.
+This project was built to demonstrate the ability to create an API to power an online text editor that creates code files.
+Each file is saved to a .db file called `fileData.db`. This uses the file system API in node js (https://nodejs.org/api/fs.html). 
+To prevent the server from getting filled up with files, the server will automatically delete files after a 5 minute mark for each file. This is written in the function called `deleteFile()` which will loop through fileData every 10s.
+
+**Data storage format**
+```
+const fileData = {
+  fileName: {
+    fileContent: '<h1>Hey!<h1>',
+    age: Date.now()
+  }
+}
+```
+
 
 **API format:**
 * GET resquest to /api will take the user to an empty editor
