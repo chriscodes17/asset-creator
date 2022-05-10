@@ -1,0 +1,87 @@
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+.input-container {
+display: flex;
+flex-flow: row nowrap;
+padding: 10px;
+}
+.file-input {
+width: 90%;
+height: 40px;
+font-size: 20px;
+}
+.create-btn {
+width: 10%;
+}
+.element-btn:hover {
+cursor: pointer;
+}
+#editor {
+width: 75%;
+height: 100vh;
+}
+.file-list {
+width: 25%;
+height: 100vh;
+overflow: scroll;
+}
+.file-list-element {
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+padding: 10px;
+background-color: rgb(211, 211, 211);
+margin-bottom: 10px;
+}
+.file-list-element:hover {
+background-color: rgb(211, 211, 250);
+}
+.loader-container {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.lds-ring {
+width: 80px;
+height: 80px;
+}
+.lds-ring div {
+box-sizing: border-box;
+display: block;
+position: absolute;
+width: 64px;
+height: 64px;
+margin: 8px;
+border: 8px solid #cef;
+border-radius: 50%;
+animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+border-color: #cef transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+.link:link {
+color: black;
+text-decoration: none;
+}
+.link:visited {
+color: rgb(94, 94, 255);
+text-decoration: none;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Editor!</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="input-container">
+      <input class="file-input" type="text" placeholder="add file..." />
+      <button class="create-btn">Create File</button>
+      <button onclick="location.href='/api'" type="button">
+        New Editor 
+      </button>
+    </div>
+    <div class="container">
+      <div class="file-list">
+        <div class="loader-container">
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div id="editor"></div>
+    </div>
+    <script
+      src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ext-modelist.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
